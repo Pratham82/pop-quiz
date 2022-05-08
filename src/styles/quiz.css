@@ -1,0 +1,125 @@
+.quiz-topic {
+  background-color: var(--color-light);
+  border-radius: var(--rounded-md);
+  box-shadow: var(--material-shadow);
+  transition: var(--normal-transition);
+}
+
+.topic-poster{
+  width: 180px;
+  border-radius: var(--rounded-md);
+  margin: var(--u-10) 0;
+  /* border: 1px solid var(--color-dark); */
+}
+
+/* Rules */
+.topic-header {
+  height: 35vh;
+}
+
+.quiz-topic:hover {
+  box-shadow: none;
+  transform: var(--normal-transform);
+}
+
+.quiz-btn {
+  cursor: pointer;
+  background-color: var(--color-dark);
+}
+.quiz-btn i {
+  color: white;
+}
+
+/* Rules */
+.rules-img {
+  padding-top: var(--u-20);
+  height: 50vh;
+}
+
+.question {
+  align-self: flex-start;
+}
+
+.questions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.option {
+  height: 70px;
+  border: 1px solid red;
+  width: 48%;
+  border: var(--u-1) solid var(--color-dark);
+  border-radius: var(--rounded-md);
+  background-color: var(--color-light);
+  cursor: pointer;
+}
+/* Custom radio for quiz */
+
+.radio {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.radio:checked {
+  background-color: red;
+}
+
+.radio__input {
+  display: none;
+}
+
+.radio__radio {
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid var(--color-dark-shade);
+  border-radius: 50%;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.radio__radio::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--color-dark);
+  transform: scale(0);
+  transition: var(--normal-transition);
+}
+
+.radio__input:checked + .radio__radio::after {
+  transform: scale(1);
+}
+
+/* Results */
+.correct-answer {
+  background-color: var(--color-success);
+}
+
+.wrong-answer {
+  background-color: var(--color-danger);
+}
+
+/* Bottom container */
+.bottom-container {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+}
+@media screen and (max-width: 620px) {
+  .main-container {
+    padding-top: 120px;
+  }
+  .option {
+    width: 100%;
+  }
+}
