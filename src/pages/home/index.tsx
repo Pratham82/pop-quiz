@@ -5,11 +5,10 @@ import { categories } from "utils";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import useQuiz from "hooks/quiz/useQuiz";
-// import { Link } from "react-router-dom";
-import movies from "assets/svg/undraw_horror_movie_3988(1).svg";
-import tvShows from "assets/svg/undraw_netflix_q-00-o(1).svg";
-import music from "assets/svg/undraw_happy_music_g6wc(1).svg";
-import books from "assets/svg/undraw_books_re_8gea.svg";
+import movies from "assets/svg/movies.svg";
+import tvShows from "assets/svg/tvShows.svg";
+import music from "assets/svg/music.svg";
+import books from "assets/svg/books.svg";
 
 export default function Home() {
   const { quizDispatch } = useQuiz();
@@ -18,7 +17,7 @@ export default function Home() {
     quizDispatch({
       type: "RESET_QUIZ",
     });
-  });
+  }, []);
   return (
     <Container>
       <div>
